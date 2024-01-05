@@ -1,0 +1,159 @@
+﻿@model project_of_dotnet.Models.trip_pkg
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@*<h1>Create</h1>
+
+<h4>trip_pkg</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="image" class="control-label"></label>
+                <input asp-for="image" class="form-control" />
+                <span asp-validation-for="image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonNumber" class="control-label"></label>
+                <input asp-for="PersonNumber" class="form-control" />
+                <span asp-validation-for="PersonNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StarNumber" class="control-label"></label>
+                <input asp-for="StarNumber" class="form-control" />
+                <span asp-validation-for="StarNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPerson" class="control-label"></label>
+                <input asp-for="TotalPerson" class="form-control" />
+                <span asp-validation-for="TotalPerson" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuideName" class="control-label"></label>
+                <input asp-for="GuideName" class="form-control" />
+                <span asp-validation-for="GuideName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Guide_Photo" class="control-label"></label>
+                <input asp-for="Guide_Photo" class="form-control" />
+                <span asp-validation-for="Guide_Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuideDescription" class="control-label"></label>
+                <input asp-for="GuideDescription" class="form-control" />
+                <span asp-validation-for="GuideDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+*@
+
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Registration</h6>
+            <h1>Welcome to KHS Travels Ltd.</h1>
+
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form bg-white" style="padding: 30px;">
+                    <div id="success"></div>
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="image" class="control-label"></label>
+                            <input asp-for="image" class="form-control" />
+                            <span asp-validation-for="image" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Location" class="control-label"></label>
+                            <input asp-for="Location" class="form-control" />
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PersonNumber" class="control-label"></label>
+                            <input asp-for="PersonNumber" class="form-control" />
+                            <span asp-validation-for="PersonNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StarNumber" class="control-label"></label>
+                            <input asp-for="StarNumber" class="form-control" />
+                            <span asp-validation-for="StarNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="TotalPerson" class="control-label"></label>
+                            <input asp-for="TotalPerson" class="form-control" />
+                            <span asp-validation-for="TotalPerson" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price" class="control-label"></label>
+                            <input asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description" class="control-label"></label>
+                            <input asp-for="Description" class="form-control" />
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="GuideName" class="control-label"></label>
+                            <input asp-for="GuideName" class="form-control" />
+                            <span asp-validation-for="GuideName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Guide_Photo" class="control-label"></label>
+                            <input asp-for="Guide_Photo" class="form-control" />
+                            <span asp-validation-for="Guide_Photo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="GuideDescription" class="control-label"></label>
+                            <input asp-for="GuideDescription" class="form-control" />
+                            <span asp-validation-for="GuideDescription" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary" />
+                        </div>
+                    </form>
+                    <br />
+                    <a asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

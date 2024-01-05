@@ -1,0 +1,64 @@
+﻿@model project_of_dotnet.Models.user_data
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "login";
+}
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website Login</title>
+</head>
+<body style="background-image: url('~/kanji/img/JASPUR.jpg'); background-size: cover; background-position: center; font-family: Arial, sans-serif; text-align: center;">
+
+    <div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px; max-width: 400px; margin: 100px auto;">
+
+        <h2>Login</h2>
+        <form method="post" asp-action="Login">
+            @Html.AntiForgeryToken()
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger mt-3">
+                    <strong>Error!</strong> Please check your username and password.
+                </div>
+            }
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        Click heare for Registration.
+        <a asp-area="" asp-controller="user_data" asp-action="Create">here</a>
+        <br />
+        If You are a Admin
+        <a asp-area="" asp-controller="admins" asp-action="Login">here</a>
+
+    </div>
+
+</body>
+</html>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+
